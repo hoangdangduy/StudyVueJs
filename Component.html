@@ -16,25 +16,26 @@
             -->
             <todo-item
               v-for="item in groceryList"
-              v-bind:todo="item"
-              v-bind:key="item.id">
+              v-bind:todo1="item"
+              v-bind:key="item.id"
+              >
             </todo-item>
           </ol>
         </div>
 
         <script type="text/javascript">
             Vue.component('todo-item', {
-                props: ['todo'],
-                template: '<li>{{ todo.text }}</li>'
-                })
+                props: ['todo1'],
+                template: '<li>{{ todo1.text1}}</li>'
+            })
 
             var app7 = new Vue({
             el: '#app-7',
             data: {
                 groceryList: [
-                  { id: 0, text: 'Vegetables' },
-                  { id: 1, text: 'Cheese' },
-                  { id: 2, text: 'Whatever else humans are supposed to eat' }
+                  { id: 0, text1: 'Vegetables' },
+                  { id: 1, text1: 'Cheese' },
+                  { id: 2, text1: 'Whatever else humans are supposed to eat' }
                 ]
             }
             })
